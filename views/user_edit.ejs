@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="/update" method="post" enctype="multipart/form-data">
+        <table>
+            <input type="hidden" value="<%= user.id %>" name="id">
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" value="<%= user.name %>"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="email" value="<%= user.email %>"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" value="<%= user.password %>"></td>
+            </tr>
+            <tr>
+                <td>Image</td>
+                <td><input type="file" name="image" value="<%= user.image %>"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="submit"></td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>
